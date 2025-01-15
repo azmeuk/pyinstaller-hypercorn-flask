@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.scripts]
-foobar = "foobar.commands:cli"
+foobar = "foobar.run:run"
 
 [tool.hatch.build]
 include = [
