@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.scripts]
-flaskapp = "foobar.commands:cli"
+foobar = "foobar.commands:cli"
 
 [tool.hatch.build]
 include = [
