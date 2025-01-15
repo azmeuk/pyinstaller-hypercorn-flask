@@ -263,6 +263,7 @@ name = "test"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "click" },
     { name = "flask" },
     { name = "hypercorn" },
     { name = "pyinstaller" },
@@ -270,6 +271,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "click", specifier = ">=8.1.8" },
     { name = "flask", specifier = ">=3.1.0" },
     { name = "hypercorn", specifier = ">=0.17.3" },
     { name = "pyinstaller", specifier = ">=6.11.1" },

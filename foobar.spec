@@ -2,11 +2,11 @@
 
 
 a = Analysis(
-    ['foobar/run.py'],
+    ['foobar/app.py'],
     pathex=[],
     binaries=[],
     datas=[],
-    hiddenimports=["foobar.app"],
+    hiddenimports=[],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],

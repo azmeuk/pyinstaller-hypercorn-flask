@@ -9,13 +9,14 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "click>=8.1.8",
     "flask>=3.1.0",
     "hypercorn>=0.17.3",
     "pyinstaller>=6.11.1",
 ]
 
 [project.scripts]
-foobar = "foobar.run:run"
+foobar = "foobar.app:runserver"
 
 [tool.hatch.build]
 include = [
