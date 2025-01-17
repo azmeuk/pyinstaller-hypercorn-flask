@@ -13,11 +13,19 @@ def hello_world():
     return "<p>Hello, World!</p>"
 
 
-@click.command()
+@click.group()
+def cli():
+    pass
+
+
+@cli.command()
+def hello():
+    print("Hello, world!")
+
+
+@cli.command()
 def runserver():
     print("Hypercorn runner starting...")
-    if getattr(sys, "frozen", False) and hasattr(sys, "_MEIPASS"):
-        multiprocessing.freeze_support()
 
     config_obj = Config()
     config_obj.application_path = "foobar.app:app"
@@ -28,4 +36,7 @@ def runserver():
 
 
 if __name__ == "__main__":
-    runserver()
+    if getattr(sys, "frozen", False) and hasattr(sys, "_MEIPASS"):
+        multiprocessing.freeze_support()
+
+    cli()
